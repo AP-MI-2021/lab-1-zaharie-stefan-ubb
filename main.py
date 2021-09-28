@@ -17,7 +17,10 @@ Returneaza produsul numerelor din lista lst.
 '''
 def get_product(lst):
   # codul vostru aici
-  pass
+  ans = 1
+  for i in lst:
+      ans *= i
+  return ans
   
   
 '''
@@ -35,10 +38,6 @@ def get_cmmdc_v2(x, y):
   # codul vostru aici
   pass
 
-# Return an int list generated from a string
-def str_to_list(str_lst):
-  map_obj = (int, str_list.split())
-  
 def main():
   # interfata de tip consola aici
   print("""
@@ -58,8 +57,10 @@ Menu:
           print("The number is not prime!")
 
   if option == 2:
-      str_list = input("Enter the numbers separated by spaces")
-      print(get_product(str_to_list(str_list)))
+      str_list = input("Enter the numbers separated by spaces: ")
+      map_obj = map(int, str_list.split())
+      lst = list(map_obj)
+      print(get_product(lst))
 
   if option == 3 or option == 4:
       num1 = int(input("Enter the first number: "))
