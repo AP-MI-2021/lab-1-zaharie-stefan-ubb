@@ -56,19 +56,21 @@ Menu:
       else:
           print("The number is not prime!")
 
-  if option == 2:
+  elif option == 2:
       str_list = input("Enter the numbers separated by spaces: ")
       map_obj = map(int, str_list.split())
       lst = list(map_obj)
       print(get_product(lst))
 
-  if option == 3 or option == 4:
+  elif option == 3 or option == 4:
       num1 = int(input("Enter the first number: "))
       num2 = int(input("Enter the second number: "))
       if option == 3:
           print(get_cmmd_v1(num1, num2))
       else:
           print(get_cmmd_v2(num1, num2))
+  else:
+      print("Incorrect option!")
 
 
 
