@@ -3,8 +3,14 @@ Returneaza true daca n este prim si false daca nu.
 '''
 def is_prime(n):
   # codul vostru aici
-  pass
-  
+  if n > 1:
+      for i in range(2, int(n / 2) + 1):
+          if (n % i) == 0:
+              return False
+  else:
+    return False
+  return True
+
   
 '''
 Returneaza produsul numerelor din lista lst.
@@ -46,7 +52,10 @@ Menu:
 
   if option == 1:
       num = int(input("Enter a number: "))
-      print(is_prime(num))
+      if is_prime(num):
+          print("The number is prime!")
+      else:
+          print("The number is not prime!")
 
   if option == 2:
       str_list = input("Enter the numbers separated by spaces")
