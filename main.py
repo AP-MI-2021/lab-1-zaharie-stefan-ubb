@@ -37,7 +37,9 @@ Returneaza CMMDC a doua numere x si y folosind al doilea algoritm.
 '''
 def get_cmmdc_v2(x, y):
   # codul vostru aici
-  pass
+  for i in range(min(x, y), 0, -1):
+      if (x % i) == 0 and (y % i) == 0:
+          return i
 
 def main():
   # interfata de tip consola aici
@@ -46,7 +48,7 @@ Menu:
 1. Verify if a number is prime
 2. Get product of a list of numbers
 3. Get GCD v1
-4. Get GCD v2
+4. Get GCD v2 (slow)
   """)
   option = int(input("Enter an option: "))
 
