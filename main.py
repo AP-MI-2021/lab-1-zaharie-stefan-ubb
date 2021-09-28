@@ -28,8 +28,9 @@ Returneaza CMMDC a doua numere x si y folosind primul algoritm.
 '''
 def get_cmmdc_v1(x, y):
   # codul vostru aici
-  pass
-  
+  if x == 0:
+      return y
+  return get_cmmdc_v1(y % x, x)
   
 '''
 Returneaza CMMDC a doua numere x si y folosind al doilea algoritm.
@@ -44,7 +45,7 @@ def main():
 Menu:
 1. Verify if a number is prime
 2. Get product of a list of numbers
-3. Get GCD v1
+3. Get GCD v1 (slow)
 4. Get GCD v2
   """)
   option = int(input("Enter an option: "))
@@ -66,9 +67,9 @@ Menu:
       num1 = int(input("Enter the first number: "))
       num2 = int(input("Enter the second number: "))
       if option == 3:
-          print(get_cmmd_v1(num1, num2))
+          print(get_cmmdc_v1(num1, num2))
       else:
-          print(get_cmmd_v2(num1, num2))
+          print(get_cmmdc_v2(num1, num2))
   else:
       print("Incorrect option!")
 
