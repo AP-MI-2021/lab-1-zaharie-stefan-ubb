@@ -45,7 +45,7 @@ def main():
 Menu:
 1. Verify if a number is prime
 2. Get product of a list of numbers
-3. Get GCD v1 (slow)
+3. Get GCD v1
 4. Get GCD v2
   """)
   option = int(input("Enter an option: "))
